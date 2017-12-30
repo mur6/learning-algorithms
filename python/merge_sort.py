@@ -3,7 +3,7 @@ import sys
 import random
 
 
-def get_random_list(n=1000):
+def get_random_list(n):
     lis = list(range(n))
     random.shuffle(lis)
     return lis
@@ -37,8 +37,8 @@ def merge_sort(A, start, end):
 
 
 def main():
-    A = get_random_list()
-    num = len(A)
+    num = int(float(sys.argv[1]))
+    A = get_random_list(num)
     global L, R
     L = [0] * num
     R = [0] * num

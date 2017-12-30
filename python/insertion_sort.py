@@ -1,8 +1,9 @@
 # encoding: utf-8
+import sys
 import random
 
 
-def get_random_list(n=1000):
+def get_random_list(n):
     lis = list(range(n))
     random.shuffle(lis)
     return lis
@@ -22,7 +23,8 @@ def ins_sort(a):
 
 
 def main():
-    a = get_random_list()
+    num = int(float(sys.argv[1]))
+    a = get_random_list(num)
     ins_sort(a)
     print(a)
 

@@ -1,0 +1,45 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'abc161_c'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=abc161_c",
+                    "--package=abc161_c"
+                ],
+                "filter": {
+                    "name": "abc161_c",
+                    "kind": "bin"
+                }
+            },
+            "args": ["<", "data.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'abc161_c'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=abc161_c",
+                    "--package=abc161_c"
+                ],
+                "filter": {
+                    "name": "abc161_c",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

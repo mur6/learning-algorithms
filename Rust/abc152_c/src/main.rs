@@ -23,17 +23,11 @@ fn main() {
     let p_list = to_number_vector(&read());
     let mut minimums = Vec::with_capacity(n);
     let mut prev = i64::MAX;
-    for &p in p_list.iter() {
+    for &p in &p_list {
         let m = cmp::min(prev, p);
         minimums.push(m);
         prev = m;
     }
-    let mut count: i32 = 0;
-    for (&p, &m) in p_list.iter().zip(minimums.iter()) {
-        //println!("{} {}", p, m);
-        if p == m {
-            count += 1
-        };
-    }
-    println!("{}", count);
+    let answer_list: Vec<_> = p_list.iter().zip(minimums.iter()).filter(|(&p, &m)| p == m).collect();
+    println!("{}", answer_list.len());
 }

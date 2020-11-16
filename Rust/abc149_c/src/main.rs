@@ -1,6 +1,6 @@
 /// # 問題
 /// 2020/07/22
-/// https://atcoder.jp/contests/abc152/tasks/abc152_c
+/// https://atcoder.jp/contests/abc149/tasks/abc149_c
 ///
 /// # 提出
 /// https://atcoder.jp/contests/abc152/submissions/18076262

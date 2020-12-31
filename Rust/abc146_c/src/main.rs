@@ -18,5 +18,13 @@ fn to_number_vector(s: &str) -> Vec<i64> {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let k = [
+        '\u{305F}', '\u{035C}', '\u{035C}', '\u{034F}',
+        '\u{0318}', '\u{0323}'];
+    let s: String = k.iter().collect();
+    // let a: i32 = 3;
+    // dbg!(a);
+    // let b = (1..=10).collect::<Vec<i32>>();
+    // dbg!(b);
+    print!("{}", s);
 }

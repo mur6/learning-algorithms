@@ -6,4 +6,12 @@ project(AtcoderExercise
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(ABC086A src/ABC086A.cpp)
+
+set(EXECUTABLES
+    ABC086A
+    ABC081A
+)
+
+foreach(EXEC ${EXECUTABLES})
+    add_executable(${EXEC} src/${EXEC}.cpp)
+endforeach()
